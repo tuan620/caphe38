@@ -187,13 +187,14 @@
         <h2 class="font-display text-3xl font-bold text-amber-900">Menu Của Chúng Tôi</h2><button onclick="navigatePage('home')" class="flex items-center gap-2 text-amber-700 hover:text-amber-900"><i data-lucide="arrow-left" class="w-5 h-5"></i>Quay Lại</button>
        </div>
        <p class="text-amber-700 mb-8">Khám phá bộ sưu tập cà phê đa dạng với nhiều hương vị độc đáo</p>
-       <div class="flex flex-wrap justify-center gap-3 mb-10"><button onclick="filterCategory('all')" class="category-tab active px-6 py-2 rounded-full border-2 border-amber-600 font-medium transition-all" data-category="all">Tất Cả</button> 
-        <button onclick="filterCategory('Cà Phê')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="coffee">Cà Phê</button> 
-        <button onclick="filterCategory('Trà Sữa')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="milk-tea">Trà Sữa</button> 
-        <button onclick="filterCategory('Sinh Tố')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="smoothie">Sinh Tố</button> 
-        <button onclick="filterCategory('Trà')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="tea">Trà</button>
-        <button onclick="filterCategory('Đồ ăn nhanh')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="fatfood">Đồ Ăn Nhanh</button>
-        <button onclick="filterCategory('Đồ uống gas')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="fatfood">Đồ Uống Có GAS</button>
+       <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button onclick="filterCategory('all')" class="category-tab active px-6 py-2 rounded-full border-2 border-amber-600 font-medium transition-all" data-category="all">Tất Cả</button> 
+        <button onclick="filterCategory('Cà Phê')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="Cà Phê">Cà Phê</button> 
+        <button onclick="filterCategory('Trà Sữa')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="Trà Sữa">Trà Sữa</button> 
+        <button onclick="filterCategory('Sinh Tố')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="Sinh Tố">Sinh Tố</button> 
+        <button onclick="filterCategory('Trà')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="Trà">Trà</button>
+        <button onclick="filterCategory('Đồ ăn nhanh')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="Đồ ăn nhanh">Đồ Ăn Nhanh</button>
+        <button onclick="filterCategory('Đồ uống gas')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="Đồ uống gas">Đồ Uống Có GAS</button>
        </div>
        <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-8"></div>
       </div>
@@ -253,11 +254,14 @@
         <h2 class="font-display text-3xl font-bold text-amber-900">Về Chúng Tôi</h2><button onclick="navigatePage('home')" class="flex items-center gap-2 text-amber-700 hover:text-amber-900"><i data-lucide="arrow-left" class="w-5 h-5"></i>Quay Lại</button>
        </div>
        <div class="space-y-8">
-        <div class="grid md:grid-cols-3 gap-6"><img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&amp;h=400&amp;fit=crop" alt="Quán cà phê" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22500%22 height=%22400%22/%3E%3C/svg%3E'; this.alt='Hình ảnh không tải được'"> <img src="https://images.unsplash.com/photo-1457521564536-7f54dba1da61?w=500&amp;h=400&amp;fit=crop" alt="Cà phê chuyên nghiệp" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22500%22 height=%22400%22/%3E%3C/svg%3E'; this.alt='Hình ảnh không tải được'"> <img src="https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=500&amp;h=400&amp;fit=crop" alt="Không gian cà phê" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22500%22 height=%22400%22/%3E%3C/svg%3E'; this.alt='Hình ảnh không tải được'">
+        <div class="grid md:grid-cols-3 gap-6">
+            <img src="./HinhAnh/capheden.png" alt="Quán cà phê" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22500%22 height=%22400%22/%3E%3C/svg%3E'; this.alt='Hình ảnh không tải được'"> 
+            <img src="./HinhAnh/CapheBG.png" alt="Cà phê chuyên nghiệp" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22500%22 height=%22400%22/%3E%3C/svg%3E'; this.alt='Hình ảnh không tải được'"> 
+            <img src="./HinhAnh/garan.png" alt="Không gian cà phê" class="w-full h-64 object-cover rounded-2xl shadow-lg" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22500%22 height=%22400%22/%3E%3C/svg%3E'; this.alt='Hình ảnh không tải được'">
         </div>
         <div>
          <h3 class="font-display text-3xl font-bold text-amber-900 mb-4">Trăng & Sương</h3>
-         <p class="text-amber-700 text-lg leading-relaxed">Được thành lập từ năm 2020, Coffee House là điểm đến lý tưởng cho những ai yêu thích cà phê chất lượng. Chúng tôi tự hào mang đến những ly cà phê được chế biến từ hạt cà phê tuyển chọn từ cao nguyên Việt Nam.</p>
+         <p class="text-amber-700 text-lg leading-relaxed">Được thành lập từ năm 2026, Trăng & Sương là điểm đến lý tưởng cho những ai yêu thích cà phê chất lượng. Chúng tôi tự hào mang đến những ly cà phê được chế biến từ hạt cà phê tuyển chọn từ cao nguyên Việt Nam.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
          <div class="bg-white rounded-2xl p-6 shadow-lg">
@@ -275,7 +279,7 @@
          </div>
         </div>
         <div class="bg-white rounded-2xl p-8 shadow-lg">
-         <h4 class="font-display text-2xl font-bold text-amber-900 mb-6">Theo Dõi Chúng Tôi</h4>
+         <h4 class="font-display text-2xl font-bold text-amber-900 mb-6">Theo Dõi Chúng Tôi 😍 </h4>
          <div class="flex gap-4"><a href="#" class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center hover:bg-amber-200 transition-colors"><i data-lucide="facebook" class="w-6 h-6 text-amber-800"></i></a> <a href="#" class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center hover:bg-amber-200 transition-colors"><i data-lucide="instagram" class="w-6 h-6 text-amber-800"></i></a> <a href="#" class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center hover:bg-amber-200 transition-colors"><i data-lucide="twitter" class="w-6 h-6 text-amber-800"></i></a>
          </div>
         </div>
