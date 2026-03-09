@@ -58,7 +58,7 @@
         </div>
         <div class="relative">
          <div class="w-full h-96 bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 rounded-3xl flex items-center justify-center shadow-2xl">
-          <div class="text-center"><i data-lucide="coffee" class="w-32 h-32 text-white mx-auto mb-4"></i>
+          <div class="text-center"><img src="./HinhAnh/CapheBG.png" class="w-325 h-325 text-white mx-auto mb-5"></img>
            <p class="text-white text-xl font-medium">Premium Coffee</p>
           </div>
          </div>
@@ -188,11 +188,12 @@
        </div>
        <p class="text-amber-700 mb-8">Khám phá bộ sưu tập cà phê đa dạng với nhiều hương vị độc đáo</p>
        <div class="flex flex-wrap justify-center gap-3 mb-10"><button onclick="filterCategory('all')" class="category-tab active px-6 py-2 rounded-full border-2 border-amber-600 font-medium transition-all" data-category="all">Tất Cả</button> 
-        <button onclick="filterCategory('coffee')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="coffee">Cà Phê</button> 
-        <button onclick="filterCategory('milk-tea')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="milk-tea">Trà Sữa</button> 
-        <button onclick="filterCategory('smoothie')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="smoothie">Sinh Tố</button> 
-        <button onclick="filterCategory('tea')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="tea">Trà</button>
-        <button onclick="filterCategory('fatfood')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="fatfood">Đồ Ăn Nhanh</button>
+        <button onclick="filterCategory('Cà Phê')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="coffee">Cà Phê</button> 
+        <button onclick="filterCategory('Trà Sữa')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="milk-tea">Trà Sữa</button> 
+        <button onclick="filterCategory('Sinh Tố')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="smoothie">Sinh Tố</button> 
+        <button onclick="filterCategory('Trà')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="tea">Trà</button>
+        <button onclick="filterCategory('Đồ ăn nhanh')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="fatfood">Đồ Ăn Nhanh</button>
+        <button onclick="filterCategory('Đồ uống gas')" class="category-tab px-6 py-2 rounded-full border-2 border-amber-600 text-amber-700 font-medium hover:bg-amber-50 transition-all" data-category="fatfood">Đồ Uống Có GAS</button>
        </div>
        <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-8"></div>
       </div>
@@ -632,22 +633,31 @@
   </div>
   <script>
     const products = [
-      { id: 1, name: 'Cà Phê Đen', category: 'coffee', description: 'Cà phê đen đậm đà, thơm ngon từ hạt Robusta cao nguyên. Vị đắng nhẹ, hậu ngọt thanh.', basePrice: 25000, image: 'coffee', color: 'from-amber-800 to-amber-900' },
-      { id: 2, name: 'Cà Phê Sữa', category: 'coffee', description: 'Cà phê sữa béo ngậy, hòa quyện giữa vị đắng cà phê và ngọt béo của sữa đặc.', basePrice: 30000, image: 'coffee', color: 'from-amber-600 to-amber-700' },
-      { id: 3, name: 'Cappuccino', category: 'coffee', description: 'Espresso Ý pha với sữa nóng và lớp bọt sữa mịn màng trên cùng.', basePrice: 45000, image: 'coffee', color: 'from-amber-700 to-amber-800' },
-      { id: 4, name: 'Latte', category: 'coffee', description: 'Cà phê espresso kết hợp với sữa tươi, tạo nên hương vị nhẹ nhàng, dễ uống.', basePrice: 45000, image: 'coffee', color: 'from-orange-600 to-orange-700' },
-      { id: 5, name: 'Americano', category: 'coffee', description: 'Espresso pha loãng với nước nóng, giữ nguyên hương vị cà phê đậm đà.', basePrice: 40000, image: 'coffee', color: 'from-stone-700 to-stone-800' },
-      { id: 6, name: 'Trà Sữa Trân Châu', category: 'milk-tea', description: 'Trà sữa thơm ngon với trân châu đường đen dai giòn, vị béo ngậy.', basePrice: 35000, image: 'cup-soda', color: 'from-purple-500 to-purple-600' },
-      { id: 7, name: 'Trà Sữa Matcha', category: 'milk-tea', description: 'Trà xanh Nhật Bản kết hợp sữa tươi, vị thanh mát, thơm ngon.', basePrice: 40000, image: 'cup-soda', color: 'from-green-500 to-green-600' },
-      { id: 8, name: 'Sinh Tố Bơ', category: 'smoothie', description: 'Sinh tố bơ béo ngậy, thơm ngon, bổ dưỡng từ trái bơ tươi.', basePrice: 45000, image: 'glass-water', color: 'from-lime-500 to-lime-600' },
-      { id: 9, name: 'Sinh Tố Xoài', category: 'smoothie', description: 'Sinh tố xoài tươi mát, ngọt tự nhiên từ xoài chín mọng.', basePrice: 40000, image: 'glass-water', color: 'from-yellow-500 to-yellow-600' },
-      { id: 10, name: 'Trà Đào', category: 'tea', description: 'Trà đào thanh mát, hương đào thơm ngọt tự nhiên.', basePrice: 35000, image: 'leaf', color: 'from-orange-400 to-orange-500' },
-      { id: 11, name: 'Trà Sen Vàng', category: 'tea', description: 'Trà sen thơm ngát, vị thanh nhẹ, mang đến cảm giác thư thái.', basePrice: 38000, image: 'leaf', color: 'from-emerald-500 to-emerald-600' },
-      { id: 12, name: 'Mocha', category: 'coffee', description: 'Sự kết hợp hoàn hảo giữa cà phê espresso, chocolate và sữa tươi.', basePrice: 50000, image: 'coffee', color: 'from-yellow-800 to-yellow-900' },
-      { id: 13, name: 'gà rán', category: 'fatfood', description: 'gà rán', basePrice: 55000, image: 'coffee', color: 'from-yellow-700 to-yellow-800' },
-      { id: 14, name: 'bugger', category: 'fatfood', description: 'Trà sữa Thái với hương vị trà xanh đặc trưng, kết hợp cùng sữa tươi.', basePrice: 40000, image: 'cup-soda', color: 'from-green-600 to-green-700' },
-      { id: 15, name: 'Khoai tây chiên', category: 'fatfood', description: 'Sinh tố dâu tây ngọt ngào, thơm mát từ những trái dâu tươi ngon.', basePrice: 40000, image: 'glass-water', color: 'from-pink-500 to-pink-600' },
-        { id: 16, name: 'soda', category: 'fatfood', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: 'leaf', color: 'from-red-400 to-red-500' }
+        { id: 1, name: 'Cà Phê Đen', category: 'Cà Phê', description: 'Cà phê đen đậm đà, thơm ngon từ hạt Robusta cao nguyên. Vị đắng nhẹ, hậu ngọt thanh.', basePrice: 25000, image: "./HinhAnh/capheden.png" },
+        { id: 2, name: 'Cà Phê Sữa', category: 'Cà Phê', description: 'Cà phê sữa béo ngậy, hòa quyện giữa vị đắng cà phê và ngọt béo của sữa đặc.', basePrice: 30000, image: "./HinhAnh/caphesua1.png", color: 'from-amber-700 to-amber-800' },
+        { id: 3, name: 'Cappuccino', category: 'Cà Phê', description: 'Espresso Ý pha với sữa nóng và lớp bọt sữa mịn màng trên cùng.', basePrice: 45000, image: "./HinhAnh/trasuatranchau.png", color: 'from-amber-700 to-amber-800' },
+        { id: 4, name: 'Latte', category: 'Cà Phê', description: 'Cà phê espresso kết hợp với sữa tươi, tạo nên hương vị nhẹ nhàng, dễ uống.', basePrice: 45000, image: "./HinhAnh/latte.png", color: 'from-orange-600 to-orange-700' },
+        { id: 5, name: 'Americano', category: 'Cà Phê', description: 'Espresso pha loãng với nước nóng, giữ nguyên hương vị cà phê đậm đà.', basePrice: 40000, image: "./HinhAnh/americano.png", color: 'from-stone-700 to-stone-800' },
+        { id: 6, name: 'Trà Sữa Trân Châu', category: 'Trà Sữa', description: 'Trà sữa thơm ngon với trân châu đường đen dai giòn, vị béo ngậy.', basePrice: 35000, image: "./HinhAnh/trasuatranchau.png", color: 'from-purple-500 to-purple-600' },
+        { id: 7, name: 'Trà Sữa Matcha', category: 'Trà Sữa', description: 'Trà xanh Nhật Bản kết hợp sữa tươi, vị thanh mát, thơm ngon.', basePrice: 40000, image: "./HinhAnh/trasuamatcha.png", color: 'from-green-700 to-green-800' },
+        { id: 8, name: 'Sinh Tố Bơ', category: 'Sinh Tố', description: 'Sinh tố bơ béo ngậy, thơm ngon, bổ dưỡng từ trái bơ tươi.', basePrice: 45000, image: "./HinhAnh/sinhtobo.png", color: 'from-lime-500 to-lime-600' },
+        { id: 9, name: 'Sinh Tố Xoài', category: 'Sinh Tố', description: 'Sinh tố xoài tươi mát, ngọt tự nhiên từ xoài chín mọng.', basePrice: 40000, image: "./HinhAnh/sinhtosoai.png", color: 'from-yellow-500 to-yellow-600' },
+        { id: 10, name: 'Trà Đào', category: 'Trà', description: 'Trà đào thanh mát, hương đào thơm ngọt tự nhiên.', basePrice: 35000, image: "./HinhAnh/tradao.png", color: 'from-orange-400 to-orange-500' },
+        { id: 11, name: 'Trà Sen Vàng', category: 'Trà', description: 'Trà sen thơm ngát, vị thanh nhẹ, mang đến cảm giác thư thái.', basePrice: 38000, image: "./HinhAnh/trasenvang.png", color: 'from-emerald-500 to-emerald-600' },
+        { id: 12, name: 'Mocha', category: 'Cà Phê', description: 'Sự kết hợp hoàn hảo giữa cà phê espresso, chocolate và sữa tươi.', basePrice: 50000, image: "./HinhAnh/mocha.png", color: 'from-yellow-800 to-yellow-900' },
+        { id: 13, name: 'gà rán', category: 'Đồ ăn nhanh', description: 'gà rán', basePrice: 55000, image: "./HinhAnh/garan.png", color: 'from-yellow-700 to-yellow-800' },
+        { id: 14, name: 'bugger', category: 'Đồ ăn nhanh', description: 'Trà sữa Thái với hương vị trà xanh đặc trưng, kết hợp cùng sữa tươi.', basePrice: 40000, image: "./HinhAnh/bugger.png", color: 'from-green-600 to-green-700' },
+        { id: 15, name: 'Khoai tây chiên', category: 'Đồ ăn nhanh', description: 'Sinh tố dâu tây ngọt ngào, thơm mát từ những trái dâu tươi ngon.', basePrice: 40000, image: "./HinhAnh/khoaitaychien.png", color: 'from-pink-500 to-pink-600' },
+        { id: 16, name: 'Pizza', category: 'Đồ ăn nhanh', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/pizza.png", color: 'from-red-400 to-red-500' },
+        { id: 17, name: 'Soda', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/soda.png", color: 'from-red-400 to-red-500' },
+        { id: 18, name: 'CoCaCola', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/cocacola.png", color: 'from-red-400 to-red-500' },
+        { id: 19, name: 'Sprite', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/sprite.png", color: 'from-red-400 to-red-500' },
+        { id: 20, name: 'Nước 7UP ( ZeZo )', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/7upzezo.png", color: 'from-red-400 to-red-500' },
+        { id: 21, name: 'Nước Mirinda', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/mirinda.png", color: 'from-red-400 to-red-500' },
+        { id: 22, name: 'Warrior', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/warrior.png", color: 'from-red-400 to-red-500' },
+        { id: 23, name: 'Red Bull', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/redbull.png", color: 'from-red-400 to-red-500' },
+        { id: 24, name: ' Nước FanTA', category: 'Đồ uống gas', description: 'Trà vải thơm ngọt, hương vải tươi mát, giải nhiệt mùa hè.', basePrice: 35000, image: "./HinhAnh/fanta.png", color: 'from-red-400 to-red-500' },
+        
     ];
 
     const sizes = [
@@ -800,7 +810,7 @@
       grid.innerHTML = filtered.map(product => `
         <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
           <div class="h-40 bg-gradient-to-br ${product.color} flex items-center justify-center relative cursor-pointer" onclick="showProductDetail(${product.id})">
-            <i data-lucide="${product.image}" class="w-16 h-16 text-white/90"></i>
+            <img src="${product.image}" class="w-160 h-160 text-white/90"></i>
             <span class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">${getCategoryName(product.category)}</span>
           </div>
           <div class="p-5 flex flex-col flex-1">
@@ -810,7 +820,7 @@
               <span class="text-xl font-bold text-amber-700">${formatPrice(product.basePrice)}</span>
             </div>
             <button onclick="event.stopPropagation(); showProductDetail(${product.id})" class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg font-medium hover:from-green-700 hover:to-green-800 transition-all shadow-md flex items-center justify-center gap-2">
-              <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+              <i data-lucide ="shopping-cart" class="w-5 h-5"></i>
               Đặt Hàng Ngay
             </button>
           </div>
@@ -828,8 +838,8 @@
       
       grid.innerHTML = featured.map(product => `
         <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div class="h-40 bg-gradient-to-br ${product.color} flex items-center justify-center relative cursor-pointer" onclick="showProductDetail(${product.id})">
-            <i data-lucide="${product.image}" class="w-16 h-16 text-white/90"></i>
+          <div class="h-40 ${product.color} flex items-center justify-center relative cursor-pointer" onclick="showProductDetail(${product.id})">
+            <img src="${product.image}" class="w-160 h-160 text-white/90"></i>
             <span class="absolute top-3 right-3 bg-amber-500 text-white text-xs px-2 py-1 rounded-full">Nổi bật</span>
           </div>
           <div class="p-5">
