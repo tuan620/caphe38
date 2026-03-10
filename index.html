@@ -889,7 +889,7 @@
       
       content.innerHTML = `
         <div class="h-56 bg-gradient-to-br ${product.color} flex items-center justify-center">
-          <i data-lucide="${product.image}" class="w-24 h-24 text-white/90"></i>
+          <img src="${product.image}" class="w-full h-auto object-cover" style ="object-position: top;"></i>
         </div>
         <div class="p-8">
           <span class="inline-block bg-amber-100 text-amber-700 text-sm px-3 py-1 rounded-full mb-3">${getCategoryName(product.category)}</span>
